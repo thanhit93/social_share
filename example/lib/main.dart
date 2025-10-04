@@ -54,7 +54,7 @@ class _MyAppState extends State<MyApp> {
                   'Running on: $_platformVersion\n',
                   textAlign: TextAlign.center,
                 ),
-                RaisedButton(
+                TextButton(
                   onPressed: () async {
                     File file = await ImagePicker.pickImage(
                       source: ImageSource.gallery,
@@ -70,7 +70,7 @@ class _MyAppState extends State<MyApp> {
                   },
                   child: Text("Share On Instagram Story"),
                 ),
-                RaisedButton(
+                TextButton(
                   onPressed: () async {
                     await screenshotController.capture().then((image) async {
                       SocialShare.shareInstagramStory(
@@ -86,7 +86,7 @@ class _MyAppState extends State<MyApp> {
                   },
                   child: Text("Share On Instagram Story with background"),
                 ),
-                RaisedButton(
+                TextButton(
                   onPressed: () async {
                     await screenshotController.capture().then((image) async {
                       //facebook appId is mandatory for andorid or else share won't work
@@ -112,7 +112,7 @@ class _MyAppState extends State<MyApp> {
                   },
                   child: Text("Share On Facebook Story"),
                 ),
-                RaisedButton(
+                TextButton(
                   onPressed: () async {
                     SocialShare.copyToClipboard(
                       "This is Social Share plugin",
@@ -122,7 +122,7 @@ class _MyAppState extends State<MyApp> {
                   },
                   child: Text("Copy to clipboard"),
                 ),
-                RaisedButton(
+                TextButton(
                   onPressed: () async {
                     SocialShare.shareTwitter(
                       "This is Social Share twitter example",
@@ -135,7 +135,7 @@ class _MyAppState extends State<MyApp> {
                   },
                   child: Text("Share on twitter"),
                 ),
-                RaisedButton(
+                TextButton(
                   onPressed: () async {
                     SocialShare.shareSms(
                       "This is Social Share Sms example",
@@ -147,7 +147,7 @@ class _MyAppState extends State<MyApp> {
                   },
                   child: Text("Share on Sms"),
                 ),
-                RaisedButton(
+                TextButton(
                   onPressed: () async {
                     await screenshotController.capture().then((image) async {
                       SocialShare.shareOptions("Hello world").then((data) {
@@ -157,7 +157,7 @@ class _MyAppState extends State<MyApp> {
                   },
                   child: Text("Share Options"),
                 ),
-                RaisedButton(
+                TextButton(
                   onPressed: () async {
                     SocialShare.shareWhatsapp(
                       "Hello World \n https://google.com",
@@ -167,7 +167,7 @@ class _MyAppState extends State<MyApp> {
                   },
                   child: Text("Share on Whatsapp"),
                 ),
-                RaisedButton(
+                TextButton(
                   onPressed: () async {
                     SocialShare.shareTelegram(
                       "Hello World \n https://google.com",
@@ -177,7 +177,7 @@ class _MyAppState extends State<MyApp> {
                   },
                   child: Text("Share on Telegram"),
                 ),
-                RaisedButton(
+                TextButton(
                   onPressed: () async {
                     SocialShare.checkInstalledAppsForShare().then((data) {
                       print(data.toString());
